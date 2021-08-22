@@ -1,1 +1,8 @@
-import './sass/main.scss';
+import './fetchCountries.js';
+
+
+
+
+  
+
+form.addEventListener('submit', fetchCountries);  
