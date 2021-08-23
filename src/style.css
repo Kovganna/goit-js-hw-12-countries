@@ -27,7 +27,9 @@ body {
 }
 
 .js-img {
-    padding-right: 50px;
+    position: absolute;
+    top: 120px;
+    right: 150px;
     width: 400px;
     height: 200px;
   }
