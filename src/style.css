@@ -1,0 +1,38 @@
+html {
+    box-sizing: border-box;
+  }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: bisque;
+}
+
+.container {
+    display: block;
+    justify-content: space-between;
+}
+  
+
+.title{
+    text-align: center;
+}
+
+.list-items {
+    list-style: none;
+}
+
+.js-img {
+    padding-right: 50px;
+    width: 400px;
+    height: 200px;
+  }
+
+  .image {
+      right: 0px;
+      bottom: 0px;
+  }

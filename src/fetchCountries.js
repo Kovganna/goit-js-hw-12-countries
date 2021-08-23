@@ -15,7 +15,7 @@ const searchCountries = e => {
   const name = input.value;
   // console.log(input.value)
   fetch(`https://restcountries.eu/rest/v2/name/${name}`)
-    .then(response => response.json())
+    // .then(response => response.json())
     // .then(response => {
     //   if (response.status < 400) {
     //     return response.json();
