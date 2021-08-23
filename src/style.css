@@ -1,6 +1,6 @@
 html {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
 
 *,
 *::before,
@@ -9,32 +9,48 @@ html {
 }
 
 body {
-    background-image: url('./images/bg-pattern.png');
+  margin: 0;
+  padding: 0;
+  background-image: url('./images/bg-pattern.png');
 }
 
-.country-description {
-    display: block;
-    justify-content: space-between;
+.container {
+  padding-left: 25%;
+  padding-right: 50%;  
+  display: block;
+  justify-content: space-around;
 }
-  
 
-.title{
-    text-align: center;
+.title {
+  display: block;
+  font-size: 40px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+  padding-left: 200px;
 }
 
 .list-items {
-    list-style: none;
+  list-style: none;
 }
 
 .js-img {
-    position: absolute;
-    top: 120px;
-    right: 150px;
-    width: 400px;
-    height: 200px;
-  }
+  position: absolute;
+  top: 120px;
+  left: 300px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-  .image {
-      right: 0px;
-      bottom: 0px;
-  }
+.country-description {
+  position: relative;
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
