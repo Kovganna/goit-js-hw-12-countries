@@ -1,5 +1,6 @@
 import { alert, info, success, error } from '../node_modules/@pnotify/core/dist/PNotify.js';
 import '@pnotify/core/dist/BrightTheme.css';
+import marcup from './marcup.hbs'
 import debounce from 'lodash.debounce';
 
 
@@ -8,7 +9,7 @@ const form = document.querySelector('#form');
 const input = document.querySelector('#search');
 const container = document.querySelector('.container');
 
-
+container.insertAdjacentHTML('beforeend', marcup(country));
 const searchCountries = e => {
   e.preventDefault();
   const name = input.value;
@@ -24,45 +25,26 @@ const searchCountries = e => {
     //     });
     //   }
     // })
-    .then(data => renderCollection(data[0]))
-    // .then(data => {
-    //   if (data.length > 10) {
+    .then(result => renderCollection(result))
+    // .then(result => {
+    //   if (result.length > 10) {
     //     alert({
     //       text: 'Too many matches found. Please enter a more specific query!',
     //     })
-    //   } if (data.length < 2) {
-    //     createCountryMarcup();
+    //   } if (result.length < 2) {
+    //     renderCollection(result);
     //   } else {
-    //     renderCollection();
+    //     createCountryMarcup(obj);
     //   }
-    // });
+    // })
   .catch(err => console.log(err))
 }
 
-function createCountryMarcup({name, flag, capital, population, languages}) {
-  const article = `
-    <article>
-        <h1>${name}</h1> 
-    
-        <img src="${flag}" alt="${name}">
-        
-        <ul>
-        <li>Capital: ${capital}</li>
-        <li>Population: ${population}</li>
-        <li>Languages: ${languages}</li>
-        </ul>
-    
-    </article>
-    `;
-  container.insertAdjacentHTML('beforeend', article);
-}
+
 
   function renderCollection(arr) {
-    arr.forEach(elem => createItem(elem));
+    arr.forEach(elem => createCountryMarcup(elem));
   }
-
-
-
 form.addEventListener('submit', searchCountries);
 
 export default searchCountries;
