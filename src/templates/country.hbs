@@ -1,13 +1,13 @@
 {{#each this}}
 
 <div>
-    <h1>{{name}}</h1>
+    <h1 class="title">{{name}}</h1>
     <h2>Capital:{{capital}}</h2>
     <h2>Population:{{population}}</h2>
     <h2>Language:{{language.name}}</h2>
     <ul>
         {{#each languages}}
-        <li>{{name}}</li>
+        <li class="list-item">{{name}}</li>
         {{/each}}
     </ul>
     <img src="{{flag}}" alt="{{flag}}" class="js-img" />
