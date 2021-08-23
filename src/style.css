@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background-color: bisque;
+    background-image: url('./images/bg-pattern.png');
 }
 
 .container {
